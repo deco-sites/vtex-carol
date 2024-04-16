@@ -6,6 +6,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
   const image = item?.image?.[0];
 
+  console.log({ item, children });
+
   return (
     <li class="group flex items-center">
       <a href={url} class="py-6">

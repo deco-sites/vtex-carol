@@ -68,6 +68,7 @@ function Navbar(
   // Desktop header
   return (
     <div class="hidden sm:grid sm:grid-cols-3 items-center border-b border-base-200 w-full px-6">
+      <div class="flex flex-1 justify-around items-center">
       <ul
         class={`flex gap-6 col-span-1 ${
           logoPosition === "left" ? "justify-center" : "justify-start"
@@ -95,10 +96,11 @@ function Navbar(
           </a>
         )}
       </div>
+      </div>
       <div class="flex-none flex items-center justify-end gap-6 col-span-1">
         {!buttons?.hideSearchButton && (
           <div class="flex items-center text-xs font-thin gap-1">
-            <SearchButton />SEARCH
+            <SearchButton />
           </div>
         )}
 
@@ -112,7 +114,6 @@ function Navbar(
             <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
               <Icon id="User" size={20} strokeWidth={0.4} />
             </div>
-            ACCOUNT
           </a>
         )}
         {!buttons?.hideWishlistButton && (
@@ -127,7 +128,6 @@ function Navbar(
             >
               <Icon id="Heart" size={24} strokeWidth={0.4} />
             </button>
-            WISHLIST
           </a>
         )}
         {!buttons?.hideCartButton && (
